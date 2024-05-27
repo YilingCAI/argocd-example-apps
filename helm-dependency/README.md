@@ -4,7 +4,7 @@ This example application demonstrates how an OTS (off-the-shelf) helm chart can 
 pinned to a specific helm sem version from an upstream helm repository, and customized using a custom
 values.yaml in the private git repository.
 
-In this example, the wordpress application is pulled from the stable helm repo, and pinned to v5.0.2:
+In this example, the wordpress application is pulled from the stable helm repo, and pinned to v5.0.2 test:
 
 ```yaml
 dependencies:
@@ -28,7 +28,7 @@ wordpress:
 ### Subchart Note
 
 The wordpress chart referenced in this example contains a subchart for mariadb as specified in the requirements.yaml file of the wordpress chart:
-```yaml
+```yaml TEST
 - name: mariadb
   version: 5.x.x
   repository: https://charts.helm.sh/stable
@@ -37,7 +37,7 @@ The wordpress chart referenced in this example contains a subchart for mariadb a
     - wordpress-database
 ```
 
-In order to disable this chart, you must set the value to false for both `mariadb.enabled` and `wordpress.mariadb.enabled`. The first is used by the mariadb subchart condition field, the second is used by the wordpress chart deployment template. An example demonstration is available in the values-nomaria.yaml file:
+In order to disable this chart, you must set the value to false for both `mariadb.enabled` and `wordpress.mariadb.enabled`. The first is used by the mariadb subchart condition field, the second is used by the wordpress chart deployment template. An example demonstration is available in the values-nomaria.yaml file test:
 ```yaml
 mariadb:
   enabled: false
