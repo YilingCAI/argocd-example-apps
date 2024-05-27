@@ -4,7 +4,7 @@ This example application demonstrates how an OTS (off-the-shelf) helm chart can 
 pinned to a specific helm sem version from an upstream helm repository, and customized using a custom
 values.yaml in the private git repository.
 
-In this example, the wordpress application is pulled from the stable helm repo, and pinned to v5.0.2:
+In this example, the wordpress application is pulled from the stable helm repo, and pinned to v5.0.2 test:
 
 ```yaml
 dependencies:
