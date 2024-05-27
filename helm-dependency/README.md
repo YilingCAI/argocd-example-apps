@@ -13,7 +13,7 @@ dependencies:
   repository: https://charts.helm.sh/stable
 ```
 
-A custom values.yaml is used to customize the parameters of the wordpress helm chart:
+A custom values.yaml is used to customize the parameters of the wordpress helm chart TEST:
 
 ```yaml
 wordpress:
